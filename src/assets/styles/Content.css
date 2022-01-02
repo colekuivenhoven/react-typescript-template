@@ -1,0 +1,33 @@
+/* .content-root {
+    background-color: rgba(0,0,255,0.0);
+    margin-right: auto;
+    margin-left: 8vmin;
+    width: calc(100% - 8vmin);
+    height: 100%;
+    box-sizing: border-box;
+    padding: 1vh;
+    font-size: 2vh;
+}
+
+.content-root.mobile {
+    background-color: rgba(0,0,255,0.0);
+    margin-right: 0;
+    margin-left: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    color: rgba(255,255,255,0.8);
+    box-sizing: border-box;
+    padding: 1vh;
+    font-size: 2vh;
+} */
+
+.content-root {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 1rem;
+    z-index: 50;
+}

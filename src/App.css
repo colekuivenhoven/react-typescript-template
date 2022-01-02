@@ -1,38 +1,162 @@
+@font-face {
+  font-family: 'Lato';
+  src: local('Lato'), url('./assets/fonts/Lato-Regular.ttf');
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-family: Lato;
+  color: rgba(255,255,255,0.8);
+}
+
+.head-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 8vmin;
+  background-color: rgba(255,255,255,0.0);
+  box-sizing: border-box;
+  padding-left: 1vh;
+  padding-right: 1vh;
+  overflow: hidden;
+}
+
+.head-burger {
+  height: 6vh;
+  aspect-ratio: 1;
+  border-radius: 1vh;
+  cursor: pointer;
+  transform: translateX(0vw) rotate(0deg);
+  background: url('./assets/images/svgs/icons/converted/bars.png') no-repeat center center;
+  background-size: 60%;
+  filter: invert(0);
+  opacity: 0.8;
+  transition: all 0.2s cubic-bezier(.45,0,.03,1.01);
+}
+
+.head-burger.opened {
+  background: url('./assets/images/svgs/icons/converted/plus.png') no-repeat center center;
+  background-size: 60%;
+  transform: translateX(0vw) rotate(45deg);
+  filter: invert(0);
+  opacity: 0.8;
+}
+
+.head-title {
+  font-size: 3vh;
+  font-weight: bold;
+  margin-right: auto;
+}
+
+.darkmode-button {
+  background-color: rgba(255,255,255,0.7);
+  position: absolute;
+  top: 4vmin;
+  right: 4vmin;
+  border: 0;
+  width: 7vmin;
+  height: 3vmin;
+  min-width: 7vh;
+  min-height: 3vh;
+  border-radius: 20vmin;
+  box-shadow: 0px 6px 8px 2px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.15s ease-in-out;
+}
+
+.darkmode-button-switch {
+  position: absolute;
+  left: calc(0.3vmin + 0.2vh);
+  background-color: rgb(0, 0, 0, 0.3);
+  height: 80%;
+  aspect-ratio: 1;
+  border-radius: 50vmin;
+  transition: all 0.15s ease-in-out;
+}
+
+.darkmode-button-switch.active {
+  position: absolute;
+  left: calc(100% - 2.8vh);
+  background-color: rgb(0, 110, 255);
+  height: 80%;
+  aspect-ratio: 1;
+  border-radius: 50vmin;
+}
+
+.darkmode-button-text {
+  position: absolute;
+  left: calc(100% - 3.2vh);
+  font-family: Round;
+  font-size: calc(1.15vh);
+  font-weight: bold;
+  opacity: 35%;
+  transition: all 0.15s ease-in-out;
+}
+
+.darkmode-button-text.active {
+  position: absolute;
+  left: 1vh;
+  font-family: Round;
+  font-size: 1.15vh;
+  font-weight: bold;
+  margin-right: auto;
+  opacity: 55%;
+}
+
+.darkmode-button-desc {
+  position: absolute;
+  left: -11vh;
+  font-family: Round;
+  font-weight: bold;
+  font-size: 1.75vh;
+  opacity: 35%;
+  color: rgba(0,0,0,1);
+  transition: all 0.15s ease-in-out;
+}
+
+.darkmode-button-desc.active {
+  position: absolute;
+  left: -11vh;
+  font-family: Round;
+  font-weight: bold;
+  font-size: 1.75vh;
+  opacity: 35%;
+  color: rgba(255,255,255,1);
+  transition: all 0.15s ease-in-out;
+}
+
+.noSelect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.debug {
+  position: absolute;
+  width: 100%;
+  height: 10vh;
+  bottom: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

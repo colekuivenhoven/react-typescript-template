@@ -1,0 +1,103 @@
+.nav-root.desktop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 8vmin;
+    background-color: rgb(0, 63, 181);
+    color: rgba(255,255,255,0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    font-size: 1.75vh;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding: 1vh;
+    padding-top: 2vh;
+    box-shadow: 0px 0.5vmin 0.75vmin 2px rgba(0,0,0,0.1);
+    transition: all 0.2s cubic-bezier(.45,0,.03,1.01);
+}
+
+.nav-root.mobile {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: calc(100% - 8vh);
+    background-color: rgb(0, 63, 181);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    font-size: 3vh;
+    font-weight: bold;
+    box-sizing: border-box;
+    transform: translateX(100vh);
+    color: rgba(255,255,255,0.8);
+    padding: 1vh;
+    padding-top: 2vh;
+    box-sizing: border-box;
+    box-shadow: 1vmin 0vmin 3vmin 1vmin rgba(0,0,0,0.2);
+    transition: all 0.2s cubic-bezier(.45,0,.03,1.01);
+}
+
+.nav-root.mobile.active {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: calc(100% - 8vh);
+    background-color: rgb(0, 63, 181);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    transform: translateX(0vh);
+    overflow: hidden;
+}
+
+.menu-btn-container {
+    background-color: rgba(255,0,0,0);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    border-radius: 1vh;
+    cursor: pointer;
+}
+
+.menu-btn-container.mobile:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+.menu-btn {
+    width: 6vh;
+    aspect-ratio: 1;
+    border-radius: 1vh;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.menu-btn.desktop.settings {
+    background: url('../images/svgs/icons/converted/cog.png') no-repeat center center;
+    background-size: 50%;
+    opacity: 0.8;
+}
+
+.menu-btn.desktop.settings:hover {
+    background-color: rgba(255,255,255,0.15);
+    background-size: 60%;
+}
+
+.menu-btn.mobile.settings {
+    background: url('../images/svgs/icons/converted/cog.png') no-repeat center center;
+    background-size: 50%;
+    opacity: 0.8;
+}

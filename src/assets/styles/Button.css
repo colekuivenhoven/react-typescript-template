@@ -1,0 +1,45 @@
+.button-root {
+    background-color: rgba(255,0,0,0.0);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.35rem;
+    font-weight: normal;
+    box-sizing: border-box;
+    padding: 0.2rem;
+    z-index: 10;
+}
+
+.button-object {
+    background-color: rgba(255,255,255,0.7);
+    border: 0;
+    width: 3rem;
+    height: 1.4rem;
+    border-radius: 55vmin;
+    box-shadow: 0px 4px 6px 2px rgba(0,0,0,0.075);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    margin-left: 2rem;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.button-object.active {
+    justify-content: flex-end;
+}
+
+.button-switch {
+    position: relative;
+    background-color: rgb(0, 0, 0, 0.3);
+    height: 80%;
+    aspect-ratio: 1;
+    border-radius: 50vmin;
+}
+
+.button-object.active .button-switch {
+    background-color: rgb(0, 110, 255);
+}
