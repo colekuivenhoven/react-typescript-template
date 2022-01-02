@@ -98,7 +98,7 @@ function Navbar(props:any) {
                 <Link to="/logout" className={`menu-button body noSelect ${currentPage == "logout" ? "active" : ""}`}
                     style={{color: themes[`${theme}`].text_primary}}
                     onClick={() => {
-                        setCurrentPage("account")
+                        setCurrentPage("logout")
                         setMenuOpened(false);
                     }}
                 >
