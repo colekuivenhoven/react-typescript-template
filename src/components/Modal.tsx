@@ -27,6 +27,7 @@ function Modal(props:any) {
             style={{
                 color: themes[`${theme}`].text_primary,
             }}
+            onClick={() => setModalOpened(false)}
         >
             <div className="modal-close-btn" 
                 onClick={() => setModalOpened(false)}
@@ -35,6 +36,7 @@ function Modal(props:any) {
                 style={{
                     backgroundColor: themes[`${theme}`].background_secondary,
                 }}
+                onClick={e => e.stopPropagation()}
             >
                 <div className="modal-title">Settings</div>
                 <div className="modal-body">
