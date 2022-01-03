@@ -28,7 +28,9 @@ function Manage(props:any) {
                 color: themes[`${theme}`].text_primary
             }}
         >
-            {pageName}
+            <div className="manage-content">
+                {pageName}
+            </div>
         </div>
     )
 }

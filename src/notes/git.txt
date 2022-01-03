@@ -2,7 +2,7 @@
 git add .
 
 // Commit local repo with message
-git commit -m "Created individual pages to replace the more general Content page"
+git commit -m "Updated route pages to be more mobile friendly"
 
 // Push to remote repo
 git push -u origin main

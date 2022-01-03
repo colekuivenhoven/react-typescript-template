@@ -8,7 +8,7 @@ import React, { useEffect, useRef, useState, useLayoutEffect, useContext } from 
 // Contexts Import
 import themes from "../contexts/ThemeContext";
 
-const siteTitle = "App Title";
+const siteTitle = "Template";
 
 function Navbar(props:any) {
     const theme = useContext(ThemeContext);

@@ -28,7 +28,9 @@ function Help(props:any) {
                 color: themes[`${theme}`].text_primary
             }}
         >
-            {pageName}
+            <div className="help-content">
+                {pageName}
+            </div>
         </div>
     )
 }

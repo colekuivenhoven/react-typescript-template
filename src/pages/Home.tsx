@@ -28,7 +28,9 @@ function Home(props:any) {
                 color: themes[`${theme}`].text_primary
             }}
         >
-            {pageName}
+            <div className="home-content">
+                {pageName}
+            </div>
         </div>
     )
 }

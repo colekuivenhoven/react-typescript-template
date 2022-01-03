@@ -28,7 +28,9 @@ function Account(props:any) {
                 color: themes[`${theme}`].text_primary
             }}
         >
-            {pageName}
+            <div className="account-content">
+                {pageName}
+            </div>
         </div>
     )
 }

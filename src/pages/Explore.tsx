@@ -28,7 +28,9 @@ function Explore(props:any) {
                 color: themes[`${theme}`].text_primary
             }}
         >
-            {pageName}
+            <div className="explore-content">
+                {pageName}
+            </div>
         </div>
     )
 }
