@@ -10,6 +10,16 @@ import Content from "./components/Content";
 import Button from './components/Button';
 import Modal from "./components/Modal";
 
+// Pages Import
+import Home from "./pages/Home";
+import Upload from "./pages/Upload";
+import Explore from "./pages/Explore";
+import Projects from "./pages/Projects";
+import Manage from "./pages/Manage";
+import Help from "./pages/Help";
+import Account from "./pages/Account";
+import Logout from "./pages/Logout";
+
 // Contexts Import
 import themes from "./contexts/ThemeContext";
 
@@ -109,8 +119,8 @@ function App() {
 
           <Switch>
             <Route path="/upload">
-              <Content 
-                pageTitle={"Upload"} 
+              <Upload
+                pageName={"Upload"} 
                 screenSize={screenSize}
                 isMobile={isMobile}
                 vp={vp}
@@ -119,8 +129,8 @@ function App() {
             </Route>
 
             <Route path="/explore">
-              <Content 
-                pageTitle={"Explore"} 
+              <Explore
+                pageName={"Explore"} 
                 screenSize={screenSize}
                 isMobile={isMobile}
                 vp={vp}
@@ -129,8 +139,8 @@ function App() {
             </Route>
 
             <Route path="/projects">
-              <Content 
-                pageTitle={"Projects"} 
+              <Projects
+                pageName={"Projects"} 
                 screenSize={screenSize}
                 isMobile={isMobile}
                 vp={vp}
@@ -139,8 +149,8 @@ function App() {
             </Route>
 
             <Route path="/manage">
-              <Content 
-                pageTitle={"Manage"} 
+              <Manage
+                pageName={"Manage"} 
                 screenSize={screenSize}
                 isMobile={isMobile}
                 vp={vp}
@@ -149,8 +159,8 @@ function App() {
             </Route>
 
             <Route path="/help">
-              <Content 
-                pageTitle={"Get Help"} 
+              <Help
+                pageName={"Get Help"} 
                 screenSize={screenSize}
                 isMobile={isMobile}
                 vp={vp}
@@ -159,8 +169,8 @@ function App() {
             </Route>
 
             <Route path="/account">
-              <Content 
-                pageTitle={"My Account"} 
+              <Account
+                pageName={"My Account"} 
                 screenSize={screenSize}
                 isMobile={isMobile}
                 vp={vp}
@@ -169,8 +179,8 @@ function App() {
             </Route>
 
             <Route path="/logout">
-              <Content 
-                pageTitle={"Logout"} 
+              <Logout 
+                pageName={"Logout"} 
                 screenSize={screenSize}
                 isMobile={isMobile}
                 vp={vp}
@@ -179,8 +189,8 @@ function App() {
             </Route>
 
             <Route path="/">
-              <Content 
-                pageTitle={"Home"} 
+              <Home
+                pageName={"Home"} 
                 screenSize={screenSize}
                 isMobile={isMobile}
                 vp={vp}

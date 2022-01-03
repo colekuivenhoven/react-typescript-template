@@ -1,4 +1,4 @@
-import "../assets/styles/Content.css";
+import "../assets/styles/page_styles/Upload.css";
 import { ThemeContext } from "../App";
 
 // Libraries Import
@@ -11,7 +11,7 @@ import Button from '../components/Button';
 // Contexts Import
 import themes from "../contexts/ThemeContext";
 
-function Content(props:any) {
+function Upload(props:any) {
     const theme = useContext(ThemeContext);
 
     // Prop declarations
@@ -22,7 +22,7 @@ function Content(props:any) {
     const pageName = props.pageName;
 
     return (
-        <div className="content-root"
+        <div className="upload-root"
             style={{
                 backgroundColor: themes[`${theme}`].background_primary,
                 color: themes[`${theme}`].text_primary
@@ -33,4 +33,4 @@ function Content(props:any) {
     )
 }
 
-export default Content;
+export default Upload;
