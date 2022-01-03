@@ -28,7 +28,11 @@ function Explore(props:any) {
                 color: themes[`${theme}`].text_primary
             }}
         >
-            <div className="explore-content">
+            <div className="explore-content"
+                style={{
+                    borderColor: themes[`${theme}`].text_primary,
+                }}
+            >
                 {pageName}
             </div>
         </div>

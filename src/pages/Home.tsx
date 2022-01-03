@@ -28,7 +28,11 @@ function Home(props:any) {
                 color: themes[`${theme}`].text_primary
             }}
         >
-            <div className="home-content">
+            <div className="home-content"
+                style={{
+                    borderColor: themes[`${theme}`].text_primary,
+                }}
+            >
                 {pageName}
             </div>
         </div>

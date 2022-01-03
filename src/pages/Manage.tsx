@@ -28,7 +28,11 @@ function Manage(props:any) {
                 color: themes[`${theme}`].text_primary
             }}
         >
-            <div className="manage-content">
+            <div className="manage-content"
+                style={{
+                    borderColor: themes[`${theme}`].text_primary,
+                }}
+            >
                 {pageName}
             </div>
         </div>

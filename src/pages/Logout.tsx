@@ -28,7 +28,11 @@ function Logout(props:any) {
                 color: themes[`${theme}`].text_primary
             }}
         >
-            <div className="logout-content">
+            <div className="logout-content"
+                style={{
+                    borderColor: themes[`${theme}`].text_primary,
+                }}
+            >
                 {pageName}
             </div>
         </div>

@@ -28,7 +28,11 @@ function Help(props:any) {
                 color: themes[`${theme}`].text_primary
             }}
         >
-            <div className="help-content">
+            <div className="help-content"
+                style={{
+                    borderColor: themes[`${theme}`].text_primary,
+                }}
+            >
                 {pageName}
             </div>
         </div>

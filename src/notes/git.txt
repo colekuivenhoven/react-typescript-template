@@ -2,7 +2,7 @@
 git add .
 
 // Commit local repo with message
-git commit -m "Updated route pages to be more mobile friendly"
+git commit -m "Fixed route page content border color to respond to theme"
 
 // Push to remote repo
 git push -u origin main

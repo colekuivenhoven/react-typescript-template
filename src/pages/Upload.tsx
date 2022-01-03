@@ -28,7 +28,11 @@ function Upload(props:any) {
                 color: themes[`${theme}`].text_primary
             }}
         >
-            <div className="upload-content">
+            <div className="upload-content"
+                style={{
+                    borderColor: themes[`${theme}`].text_primary,
+                }}
+            >
                 {pageName}
             </div>
         </div>

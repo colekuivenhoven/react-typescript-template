@@ -28,7 +28,11 @@ function Account(props:any) {
                 color: themes[`${theme}`].text_primary
             }}
         >
-            <div className="account-content">
+            <div className="account-content"
+                style={{
+                    borderColor: themes[`${theme}`].text_primary,
+                }}
+            >
                 {pageName}
             </div>
         </div>
