@@ -7,6 +7,7 @@ import React, { useEffect, useRef, useState, useLayoutEffect, useContext } from 
 
 // Components Import
 import Button from '../components/Button';
+import Infocard from '../components/Infocard';
 
 // Contexts Import
 import themes from "../contexts/ThemeContext";
@@ -34,6 +35,24 @@ function Home(props:any) {
                 }}
             >
                 {pageName}
+                <Infocard 
+                    screenSize={screenSize}
+                    isMobile={isMobile}
+                    vp={vp}
+                    title="Test Title"
+                    description="Test Description"
+                    width="100%"
+                    textfirst={true}
+                />
+                <Infocard 
+                    screenSize={screenSize}
+                    isMobile={isMobile}
+                    vp={vp}
+                    title="Test Title 2"
+                    description="Test Description 2"
+                    width="100%"
+                    textfirst={false}
+                />
             </div>
         </div>
     )
