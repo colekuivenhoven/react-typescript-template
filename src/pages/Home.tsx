@@ -31,10 +31,9 @@ function Home(props:any) {
         >
             <div className="home-content"
                 style={{
-                    borderColor: themes[`${theme}`].text_primary,
+                    borderColor: "transparent",
                 }}
             >
-                {pageName}
                 <Infocard 
                     screenSize={screenSize}
                     isMobile={isMobile}

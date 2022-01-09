@@ -160,3 +160,31 @@
   display: flex;
   flex-direction: column;
 }
+
+.mobile-burger-bar {
+  background-color: rgba(255,0,0,0.0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  z-index: 100;
+}
+
+.burger-button {
+  background-color: white;
+  height: 100%;
+  aspect-ratio: 1;
+  background: url("../src/assets/images/svgs/icons/converted/bars.png") no-repeat center center;
+  background-size: 55%;
+  background-color: rgba(0, 110, 255, 0.25);
+  border-radius: 0.35rem;
+  box-shadow: 0px 0.3rem 0.75rem 2px rgba(0,0,0,0.25);
+  backdrop-filter: blur(0.45rem);
+}

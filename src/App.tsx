@@ -105,6 +105,17 @@ function App() {
             onTouchMove={(e) => handleTouchMove(e)}
             onTouchEnd={() => handleTouchEnd()}
         >
+
+          {isMobile && 
+            <div className="mobile-burger-bar">
+              <div className="burger-button" 
+                style={{
+                  // backgroundColor: themes["dark"].link_secondary,
+                }}
+                onClick={() => setMenuOpened(true)}
+              />
+            </div>
+          }
           <Navbar 
             screenSize={screenSize}
             isMobile={isMobile}
