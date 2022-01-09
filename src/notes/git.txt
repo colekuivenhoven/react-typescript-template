@@ -2,7 +2,7 @@
 git add .
 
 // Commit local repo with message
-git commit -m "Added burger button to mobile."
+git commit -m "Added additional burger button functionality and content scrolling."
 
 // Push to remote repo
 git push -u origin main

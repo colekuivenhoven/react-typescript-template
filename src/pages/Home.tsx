@@ -32,14 +32,15 @@ function Home(props:any) {
             <div className="home-content"
                 style={{
                     borderColor: "transparent",
+                    // borderColor: themes[`${theme}`].text_primary,
                 }}
             >
                 <Infocard 
                     screenSize={screenSize}
                     isMobile={isMobile}
                     vp={vp}
-                    title="Test Title"
-                    description="Test Description"
+                    title="Test Title 1"
+                    description="Test Description 1"
                     width="100%"
                     textfirst={true}
                 />
@@ -49,6 +50,42 @@ function Home(props:any) {
                     vp={vp}
                     title="Test Title 2"
                     description="Test Description 2"
+                    width="100%"
+                    textfirst={false}
+                />
+                <Infocard 
+                    screenSize={screenSize}
+                    isMobile={isMobile}
+                    vp={vp}
+                    title="Test Title 3"
+                    description="Test Description 3"
+                    width="100%"
+                    textfirst={true}
+                />
+                <Infocard 
+                    screenSize={screenSize}
+                    isMobile={isMobile}
+                    vp={vp}
+                    title="Test Title 4"
+                    description="Test Description 4"
+                    width="100%"
+                    textfirst={false}
+                />
+                <Infocard 
+                    screenSize={screenSize}
+                    isMobile={isMobile}
+                    vp={vp}
+                    title="Test Title 3"
+                    description="Test Description 5"
+                    width="100%"
+                    textfirst={true}
+                />
+                <Infocard 
+                    screenSize={screenSize}
+                    isMobile={isMobile}
+                    vp={vp}
+                    title="Test Title 4"
+                    description="Test Description 6"
                     width="100%"
                     textfirst={false}
                 />

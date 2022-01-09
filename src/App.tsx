@@ -108,11 +108,11 @@ function App() {
 
           {isMobile && 
             <div className="mobile-burger-bar">
-              <div className="burger-button" 
+              <div className={`burger-button ${menuOpened ? "open" : ""}`}
                 style={{
                   // backgroundColor: themes["dark"].link_secondary,
                 }}
-                onClick={() => setMenuOpened(true)}
+                onClick={() => setMenuOpened(!menuOpened)}
               />
             </div>
           }

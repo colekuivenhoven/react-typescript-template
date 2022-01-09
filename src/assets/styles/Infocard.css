@@ -22,9 +22,15 @@
     background-color: rgba(255, 0, 0, 0.0);
     width: 70%;
     height: 100%;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+}
+
+.infocard-content.mobile {
+    padding-left: 0.15rem;
+    padding-right: 0.15rem;
+    padding-top: 0.25rem;
 }
 
 .infocard-title {
@@ -53,7 +59,7 @@
     background-color: rgba(0, 255, 0, 0.0);
     padding: 0.25rem;
     opacity: 0.6;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 .infocard-image {
@@ -64,10 +70,8 @@
     box-sizing: border-box;
     z-index: 50;
     border-radius: 0.5rem;
+    height: 100%;
     width: 30%;
-    min-width: 30%;
-    aspect-ratio: 1.5;
-    min-height: 15rem;
     background: url("../images/svgs/backgrounds/wave-gray.svg") no-repeat bottom center;
     background-size: 200%;
     background-color: rgb(164, 218, 255);
@@ -75,8 +79,19 @@
     transition: all 0.2s ease-in-out;
 }
 
+.infocard-image.mobile {
+    width: 100%;
+    background: url("../images/svgs/backgrounds/wave-gray.svg") no-repeat bottom right;
+    background-size: 110%;
+    background-color: rgb(164, 218, 255);
+}
+
 .infocard-image:hover {
     background-size: 220%;
+}
+
+.infocard-image.mobile:hover {
+    background-size: 110%;
 }
 
 .infocard-image::after {
@@ -93,6 +108,36 @@
     opacity: 0.75;
     transform: scale(1);
     transition: all 0.2s ease-in-out;
+}
+
+.infocard-image.mobile::after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 3rem;
+    max-width: 70%;
+    aspect-ratio: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 100%;
+    background: url("../images/svgs/icons/solid/play-circle.svg") no-repeat center center;
+    filter: invert(1) drop-shadow(0 0.5rem 0.5rem rgba(0, 0, 0, 0.1));
+    opacity: 0.75;
+    transform: scale(1);
+    transition: all 0.2s ease-in-out;
+}
+
+.infocard-image.mobile:hover::after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 4rem;
+    max-width: 70%;
+    aspect-ratio: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 100%;
+    filter: invert(1) drop-shadow(0 0.3rem 0.2rem rgba(0, 0, 0, 0.15));
+    transform: scale(1);
+    opacity: 1;
 }
 
 .infocard-image:hover::after {

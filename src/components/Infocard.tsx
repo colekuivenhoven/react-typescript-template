@@ -22,11 +22,12 @@ function Infocard(props:any) {
 
     return (
         <>
-            {textfirst && <div className="infocard-root"
+            {!isMobile && textfirst && <div className="infocard-root"
                 style={{
                     backgroundColor: themes[`${theme}`].background_secondary,
                     color: themes[`${theme}`].text_primary,
-                    width: width
+                    width: width,
+                    flexDirection: isMobile ? "column" : "row",
                 }}
             >
                 <div className="infocard-content">
@@ -35,15 +36,30 @@ function Infocard(props:any) {
                 </div>
                 <div className="infocard-image" />
             </div>}
-            {!textfirst && <div className="infocard-root"
+            {!isMobile && !textfirst && <div className="infocard-root"
                 style={{
                     backgroundColor: themes[`${theme}`].background_secondary,
                     color: themes[`${theme}`].text_primary,
-                    width: width
+                    width: width,
+                    flexDirection: isMobile ? "column" : "row",
                 }}
             >
                 <div className="infocard-image" />
                 <div className="infocard-content">
+                    <div className="infocard-title">{title}</div>
+                    <div className="infocard-description">{description}</div>
+                </div>
+            </div>}
+            {isMobile && <div className="infocard-root"
+                style={{
+                    backgroundColor: themes[`${theme}`].background_secondary,
+                    color: themes[`${theme}`].text_primary,
+                    width: width,
+                    flexDirection: isMobile ? "column" : "row",
+                }}
+            >
+                <div className={`infocard-image ${isMobile ? "mobile" : ""}`} />
+                <div className={`infocard-content ${isMobile ? "mobile" : ""}`}>
                     <div className="infocard-title">{title}</div>
                     <div className="infocard-description">{description}</div>
                 </div>
