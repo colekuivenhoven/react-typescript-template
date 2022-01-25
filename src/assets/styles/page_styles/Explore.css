@@ -18,8 +18,99 @@
     align-items: center;
     box-sizing: border-box;
     padding: 1rem;
-    border: 0.15rem solid red;
+    border: 0.15rem solid transparent;
     width: 100%;
     max-width: 100vh;
     height: 100%;
+    overflow-y: scroll;
+}
+
+.explore-content::-webkit-scrollbar {
+    width: 0.25rem;
+    background-color: transparent;
+    transition: all 0.25s linear;
+}
+
+.explore-content::-webkit-scrollbar-thumb {
+    border-radius: 1vmin;
+    width: 0.25rem;
+    background-color: rgba(0, 0, 0, 0.25);
+    transition: all 0.25s linear;
+}
+
+.chaincard-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 1rem;
+    border: 0.15rem solid rgba(0,0,0,0.1);
+    background-color: rgba(0, 0, 0, 0.05);
+    width: 50%;
+    min-width: 20rem;
+    max-width: 100vh;
+    height: 30rem;
+    min-height: 30rem;
+    border-radius: 1.5rem;
+}
+
+.chaincard-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: transparent;
+    width: 50%;
+    min-width: 10rem;
+    max-width: 100vh;
+    min-height: 1rem;
+    max-height: 1rem;
+    border-radius: 1rem;
+}
+
+.chaincard-link-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 5.5rem;
+    max-width: 5.5vh;
+    min-height: 5.5rem;
+    max-height: 5.5rem;
+    border: 0.15rem solid rgba(0,0,0,0.15);
+    background-color: rgba(0,0,0,0);
+    border-radius: 10rem;
+    z-index: 100;
+}
+
+.chaincard-link-content::after {
+    position: absolute;
+    content: "";
+    display: flex;
+    width: 50%;
+    min-width: 10rem;
+    max-width: 10vh;
+    min-height: 1rem;
+    max-height: 1rem;
+    background-color: inherit;
+    z-index: 100;
+}
+
+.chaincard-link-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    min-width: 4rem;
+    max-width: 4rem;
+    height: 4rem;
+    min-height: 4rem;
+    max-height: 4rem;
+    background-color: rgb(181, 128, 255);
+    border-radius: 10rem;
+    z-index: 101;
 }
