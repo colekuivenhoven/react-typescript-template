@@ -2,7 +2,7 @@
 git add .
 
 // Commit local repo with message
-git commit -m "Added chained content cards to the explore page"
+git commit -m "Fixed chained cards on mobile."
 
 // Push to remote repo
 git push -u origin main

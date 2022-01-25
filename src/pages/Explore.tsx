@@ -43,7 +43,12 @@ function Explore(props:any) {
                                 alignItems: "center",
                             }}
                         >
-                            <div className="chaincard-content"></div>
+                            <div className="chaincard-content"
+                                style={{
+                                    width: `${isMobile ? "100%" : "50%"}`,
+                                    minWidth: `${isMobile ? "100%" : ""}`,
+                                }}
+                            ></div>
                             {(idx < chainArray.length - 1) && <div className="chaincard-link">
                                 <div className="chaincard-link-content"
                                     style={{
