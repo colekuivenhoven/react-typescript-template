@@ -11,7 +11,7 @@ import Button from '../components/Button';
 // Contexts Import
 import themes from "../contexts/ThemeContext";
 
-const chainArray = [0,1,2,3,4,5];
+const chainArray = ["Unit 1 - Grammar", "Unit 2 - Conjugation", "Unit 3 - Present Tense", "Unit 4 - Past Tense", "Unit 5 - Special Cases"];
 
 function Explore(props:any) {
     const theme = useContext(ThemeContext);
@@ -31,7 +31,7 @@ function Explore(props:any) {
             }}
         >
             <div className="explore-content">
-                {chainArray.map((chain:number, idx:number) => {
+                {chainArray.map((chain:string, idx:number) => {
                     return (
                         <div key={idx}
                             style={{
@@ -48,40 +48,44 @@ function Explore(props:any) {
                                     width: `${isMobile ? "100%" : "50%"}`,
                                     minWidth: `${isMobile ? "100%" : ""}`,
                                 }}
-                            ></div>
+                            >
+                                <div className="chaincard-content-header">
+                                    {chain}
+                                </div>
+                                <div className="chaincard-content-body">
+                                    <div className="chaincard-content-row">
+                                        <div className="chaincard-content-item"></div>
+                                    </div>
+                                    <div className="chaincard-content-row">
+                                        <div className="chaincard-content-item"></div>
+                                        <div className="chaincard-content-item"></div>
+                                    </div>
+                                    <div className="chaincard-content-row">
+                                        <div className="chaincard-content-item"></div>
+                                    </div>
+                                    <div className="chaincard-content-row">
+                                        <div className="chaincard-content-item"></div>
+                                        <div className="chaincard-content-item"></div>
+                                        <div className="chaincard-content-item"></div>
+                                    </div>
+                                    <div className="chaincard-content-row">
+                                        <div className="chaincard-content-item"></div>
+                                        <div className="chaincard-content-item"></div>
+                                    </div>
+                                </div>
+                            </div>
                             {(idx < chainArray.length - 1) && <div className="chaincard-link">
                                 <div className="chaincard-link-content"
                                     style={{
                                         backgroundColor: themes[`${theme}`].background_primary,
                                     }}
                                 >
-                                    <div className="chaincard-link-image">{chain}</div>
+                                    <div className="chaincard-link-image"></div>
                                 </div>
                             </div>}
                         </div>
                     )
                 })}
-                {/* <div className="chaincard-content"></div>
-                <div className="chaincard-link">
-                    <div className="chaincard-link-content"
-                        style={{
-                            backgroundColor: themes[`${theme}`].background_primary,
-                        }}
-                    >
-                        <div className="chaincard-link-image">1</div>
-                    </div>
-                </div>
-                <div className="chaincard-content"></div>
-                <div className="chaincard-link">
-                    <div className="chaincard-link-content"
-                        style={{
-                            backgroundColor: themes[`${theme}`].background_primary,
-                        }}
-                    >
-                        <div className="chaincard-link-image">1</div>
-                    </div>
-                </div>
-                <div className="chaincard-content"></div> */}
             </div>
         </div>
     )
