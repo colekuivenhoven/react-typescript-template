@@ -11,7 +11,33 @@ import Button from '../components/Button';
 // Contexts Import
 import themes from "../contexts/ThemeContext";
 
-const chainArray = ["Unit 1 - Grammar", "Unit 2 - Conjugation", "Unit 3 - Present Tense", "Unit 4 - Past Tense", "Unit 5 - Special Cases"];
+interface IChainCard {
+    title: string;
+    locked: boolean;
+}
+
+const chains:Array<IChainCard> = [
+    {
+        title: "Unit 1 - Grammar", 
+        locked: false
+    },
+    {
+        title: "Unit 2 - Conjugation", 
+        locked: false
+    },
+    {
+        title: "Unit 3 - Present Tense", 
+        locked: true
+    },
+    {
+        title: "Unit 4 - Past Tense", 
+        locked: true
+    },
+    {
+        title: "Unit 5 - Special Cases",
+        locked: true
+    },
+];
 
 function Explore(props:any) {
     const theme = useContext(ThemeContext);
@@ -31,7 +57,7 @@ function Explore(props:any) {
             }}
         >
             <div className="explore-content">
-                {chainArray.map((chain:string, idx:number) => {
+                {chains.map((chain:IChainCard, idx:number) => {
                     return (
                         <div key={idx}
                             style={{
@@ -50,7 +76,7 @@ function Explore(props:any) {
                                 }}
                             >
                                 <div className="chaincard-content-header">
-                                    {chain}
+                                    {chain.title}
                                 </div>
                                 <div className="chaincard-content-body">
                                     <div className="chaincard-content-row">
@@ -73,14 +99,18 @@ function Explore(props:any) {
                                         <div className="chaincard-content-item"></div>
                                     </div>
                                 </div>
+                                {chain.locked && <div className="chaincard-content-filter">
+                                    <h1>Lesson Locked!</h1>
+                                </div>}
                             </div>
-                            {(idx < chainArray.length - 1) && <div className="chaincard-link">
+                            
+                            {(idx < chains.length - 1) && <div className="chaincard-link">
                                 <div className="chaincard-link-content"
                                     style={{
                                         backgroundColor: themes[`${theme}`].background_primary,
                                     }}
                                 >
-                                    <div className="chaincard-link-image"></div>
+                                    <div className={`chaincard-link-image ${chains[idx+1].locked ? "locked" : ""}`}></div>
                                 </div>
                             </div>}
                         </div>
